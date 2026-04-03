@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .contact-box {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Left Section */
+        .left {
+            flex: 1;
+            min-height: 300px;
+            background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216') no-repeat center/cover;
+            color: white;
+            padding: 40px;
+        }
+
+        .left h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Right Section */
+        .right {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .field {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .field:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #5a67d8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-box {
+                flex-direction: column;
+            }
+
+            .left {
+                height: 200px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="contact-box">
+
+            <div class="left">
+                <h2>Contact Us</h2>
+                <p>We’d love to hear from you! Fill out the form and we’ll get back to you soon.</p>
+            </div>
+
+            <div class="right">
+                <form>
+                    <input type="text" class="field" placeholder="Your Name" required>
+                    <input type="email" class="field" placeholder="Your Email" required>
+                    <input type="text" class="field" placeholder="Subject">
+                    <textarea class="field" placeholder="Your Message"></textarea>
+                    <button class="btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
